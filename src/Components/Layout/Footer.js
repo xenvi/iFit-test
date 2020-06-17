@@ -1,6 +1,15 @@
 import React from 'react';
 import styled from "styled-components";
 
+// Icon links
+import SocialCircle from '../../Images/SocialCircle.svg';
+import Youtube from '../../Images/Youtube.png';
+import Facebook from '../../Images/Facebook.png';
+import Pinterest from '../../Images/Pinterest.png';
+import Instagram from '../../Images/Instagram.png';
+import Twitter from '../../Images/Twitter.png';
+import ArrowDown from '../../Images/ArrowDown.png';
+
 const Wrapper = styled.section`
     position: relative;
     width: 100%;
@@ -48,10 +57,32 @@ const SocialContainer = styled.div`
     width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
     border-top: 2px solid #585a5d;
     border-bottom: 2px solid #585a5d;
 `;
+const IconWrapper = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    margin: 0 16px;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    &:hover {
+        transform: rotate(360deg);
+        transition: 0.5s ease-in-out;
+    }
+`;
+const Circle = styled.img`
+    position: absolute;
+    top: 0;
+    left: 0;
+`;
 const LegalContainer = styled.div`
+    position: relative;
     width: 100%;
     height: 64px;
     display: flex;
@@ -60,6 +91,7 @@ const LegalContainer = styled.div`
     color: #fff;
     font: 600 14px/16px "Proxima Nova Lt";
     letter-spacing: 0.3px;
+    padding: 24px 40px;
 `;
 const Copyright = styled.div`
     color: #fff;
@@ -69,6 +101,30 @@ const Copyright = styled.div`
 const LegalItem = styled.p`
     opacity: 0.8;
     margin-left: 25px;
+    transition: 0.3s ease-in-out;
+    &:hover {
+        opacity: 1;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+    }
+`;
+const Language = styled.div`
+    position: absolute;
+    left: 0;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font: 700 14px/16px "Proxima Nova Rg";
+    letter-spacing: 0.5px;
+    margin-left: 40px;
+    cursor: pointer;
+`;
+const Arrow = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
 `;
 
 function Footer() {
@@ -95,9 +151,32 @@ function Footer() {
             </LinksWrapper>
         </LinksContainer>
         <SocialContainer>
-
+            <IconWrapper>
+                <Circle src={SocialCircle} alt="Circle" />
+                <img src={Youtube} alt="YouTube" />
+            </IconWrapper>
+            <IconWrapper>
+                <Circle src={SocialCircle} alt="Circle" />
+                <img src={Pinterest} alt="Pinterest" />
+            </IconWrapper>
+            <IconWrapper>
+                <Circle src={SocialCircle} alt="Circle" />
+                <img src={Facebook} alt="Facebook" />
+            </IconWrapper>
+            <IconWrapper>
+                <Circle src={SocialCircle} alt="Circle" />
+                <img src={Twitter} alt="Twitter" />
+            </IconWrapper>
+            <IconWrapper>
+                <Circle src={SocialCircle} alt="Circle" />
+                <img src={Instagram} alt="Instagram" />
+            </IconWrapper>
         </SocialContainer>
         <LegalContainer>
+            <Language>
+                <p>English</p>
+                <Arrow><img src={ArrowDown} alt="ArrowDown" /></Arrow>
+            </Language>
             <Copyright><p>© iFit.com. All Rights Reserved.</p></Copyright>
             <LegalItem>Privacy Policy</LegalItem>
             <LegalItem>Terms of Use</LegalItem>

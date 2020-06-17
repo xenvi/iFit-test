@@ -74,6 +74,11 @@ const Overlay = styled.div`
     justify-content: center;
     align-items: center;
     color: #fff;
+    transition: 0.3s ease-in-out;
+    &:hover {
+        background-color: rgba(0, 12, 40, 0.74);
+        transition: 0.3s ease-in-out;
+    }
 `;
 const Number = styled.div`
     font: 400 28px/30px "League Gothic - Regular";
