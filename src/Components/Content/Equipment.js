@@ -16,7 +16,7 @@ const Wrapper = styled.section`
     align-items: center;
     justify-content: center;
     font: 600 24px/28px "Proxima Nova Lt";
-    margin: 100px 0 50px 0;
+    margin: 75px 0 50px 0;
 `;
 const Text = styled.p`
     opacity: 0.8;
