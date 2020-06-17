@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Component, Fragment } from 'react';
 import './App.css';
 
 // Components
@@ -11,18 +11,20 @@ import Slider from './Components/Content/Slider';
 import DesktopLibrary from './Components/Content/DesktopLibrary';
 import Equipment from './Components/Content/Equipment';
 
-function App() {
-  return (
-    <Fragment>
-      <ProductNav />
-      <MainNav />
-        <Hero />
-        <Slider />
-        <DesktopLibrary />
-        <Equipment />
-      <Footer />
-    </Fragment>
-  );
+export class App extends Component {
+  render() {
+    return (
+      <Fragment>
+        <ProductNav />
+        <MainNav />
+          <Hero />
+          <Slider />
+          <DesktopLibrary />
+          <Equipment />
+        <Footer />
+      </Fragment>
+    );
+  }
 }
 
 export default App;

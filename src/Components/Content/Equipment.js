@@ -41,6 +41,12 @@ const Card = styled.div`
     border-radius: 4px;
     background-color: #fff;
     font: 700 24px/28px "Proxima Nova Rg";
+    transition: 0.1s ease-in-out;
+    &:hover {
+        box-shadow: 0 7px 12px rgba(46, 49, 52, 0.3);
+        cursor: pointer;
+        transition: 0.1s ease-in-out;
+    }
 `;
 const CardText = styled.p`
     opacity: 0.8;
@@ -54,19 +60,19 @@ function Equipment() {
     <Wrapper>
         <Text>Interested in our exciting iFit-enabled equipment?</Text>
         <Container>
-            <Card>
+            <Card className="exercise-card">
                 <CardImg src={TreadmillSvg} alt="Treadmill"></CardImg>
                 <CardText>Treadmills</CardText>
             </Card>
-            <Card>
+            <Card className="exercise-card">
                 <CardImg src={BikeSvg} alt="Bikes"></CardImg>
                 <CardText>Bikes</CardText>
             </Card>
-            <Card>
+            <Card className="exercise-card">
                 <CardImg src={EllipticalSvg} alt="Ellipticals"></CardImg>
                 <CardText>Ellipticals</CardText>
             </Card>
-            <Card>
+            <Card className="exercise-card">
                 <CardImg src={StrengthSvg} alt="Strength"></CardImg>
                 <CardText>Strength</CardText>
             </Card>
