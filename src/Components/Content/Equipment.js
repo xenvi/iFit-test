@@ -15,7 +15,9 @@ const Wrapper = styled.section`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-family: 600, 24px/28px "Proxima Nova Lt";
+    font: 600 24px/28px "Proxima Nova Lt";
+    margin: 50px 0;
+    background: red;
 `;
 const Text = styled.p`
     opacity: 0.8;
