@@ -13,26 +13,32 @@ import ArrowDown from '../../Images/ArrowDown.png';
 const Wrapper = styled.section`
     position: relative;
     width: 100%;
-    height: 348px;
+    height: 412px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
     background-color: #2e3134;
     display: flex;
     flex-direction: column;
     align-items: center;
+    @media (min-width: 700px) {
+        height: 348px;
+    }
 `;
 const LinksContainer = styled.div`
+    width: 100%;
     height: 208px;
     display: flex;
     align-items: center;
+    justify-content: center;
 `;
 const LinksWrapper = styled.div`
-    width: 100vw;
-    padding: 30px;
+    max-width: 700px;
+    width: 100%;
+    padding: 0 30px;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
     @media (min-width: 700px) {
-        width: 700px;
+        padding: 0 15px;
     }
 `;
 const Column = styled.ul`
@@ -135,8 +141,8 @@ const Language = styled.div`
     margin-top: 20px;
     @media (min-width: 700px) {
         position: absolute;
-        left: 0;
-        margin: 0 0 0 40px;
+        left: 40px;
+        margin-top: -20px;
     }
 `;
 const Arrow = styled.div`

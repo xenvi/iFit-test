@@ -68,11 +68,19 @@ const Button = styled.button`
       outline: none;
     }
 `;
+const LeftButton = styled(Button)`
+    position: absolute;
+    left: 16px;
+`;
+const RightButton = styled(Button)`
+    position: absolute;
+    right: 16px;
+`;
 
 function Slider() {
     return (
     <Wrapper>
-      <Button><img src={LArrow} alt="Left slider button" /></Button>
+      <LeftButton><img src={LArrow} alt="Left slider button" /></LeftButton>
       <Card>
           <Logo src={GearJunkie} alt="GearJunkie review"></Logo>
           <Review><span>“You focus on putting in the work, and the technology handles the rest.”</span></Review>
@@ -86,7 +94,7 @@ function Slider() {
           <Review><span>“Breathes new life into a tired, old running routine.”</span></Review>
       </Card>
       
-      <Button><img src={RArrow} alt="Right slider button" /></Button>
+      <RightButton><img src={RArrow} alt="Right slider button" /></RightButton>
     </Wrapper>
     );
   }

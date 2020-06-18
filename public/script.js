@@ -1,4 +1,17 @@
 window.onload = function() {
+    // Fade in on load
+    const landingtext = document.querySelector("#landingtext");
+    const landingbtn = document.querySelector("#landingbtn");
+    setTimeout(function(){ landingtext.classList.add('reveal')}, 500);
+    setTimeout(function(){ landingbtn.classList.add('reveal')}, 1000);
+    
+    // Hamburger nav open
+    const mobilenav = document.querySelector("#mobilenav");
+    document.querySelector("#hamburger").addEventListener('click', function() {
+        this.classList.toggle('open');
+        mobilenav.classList.toggle('slidein');
+    })
+
     // Mousemove parallax card effect
     document.querySelectorAll('.exercise-card').forEach((card) => {
         const height = card.clientHeight;
@@ -32,16 +45,22 @@ window.onload = function() {
 }
 
 window.onscroll = function () {
+    // Nav position and visibility on scroll
     var nav = document.querySelector("#nav");
+    var mobilenav = document.querySelector("#mobilenav");
     if (window.pageYOffset > 46) {
-        nav.classList.add("stickynav");
+        mobilenav.style.top = "72px"
       } else {
-        nav.classList.remove("stickynav");
+        mobilenav.style.top = "118px"
       }
       if (window.pageYOffset > 919) {
         nav.classList.add("hidenav");
+        mobilenav.classList.add("hidenav");
       } else {
         nav.classList.remove("hidenav");
+        mobilenav.classList.remove("hidenav");
       }
+
+      // Fade in on scroll
   };
   

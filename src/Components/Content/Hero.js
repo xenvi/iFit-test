@@ -25,12 +25,14 @@ const LandingImage = styled.div`
     opacity: 0.79;
 `;
 const LandingText = styled.div`
+    opacity: 0;
     width: 100%;
     height: auto;
     color: #fff;
     font: 600 48px/60px "Proxima Nova Lt";
     letter-spacing: 1px;
     z-index: 1;
+    transition: 0.3s ease-in-out;
     @media (min-width: 850px) {
         width: 790px;
         font: 600 60px/70px "Proxima Nova Lt";
@@ -41,6 +43,7 @@ const LandingText = styled.div`
     }
 `;
 const Button = styled.button`
+    opacity: 0;
     margin-top: 56px;
     width: 100%;
     height: 56px;
@@ -71,8 +74,8 @@ function Hero() {
     return (
     <Wrapper>
         <LandingImage />
-        <LandingText><span>The best personal training, right in your own home</span></LandingText>
-        <Button><p>JOIN IFIT COACH</p></Button>
+        <LandingText id="landingtext"><span>The best personal training, right in your own home</span></LandingText>
+        <Button id="landingbtn"><p>JOIN IFIT COACH</p></Button>
     </Wrapper>
     );
   }

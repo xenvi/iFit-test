@@ -31,12 +31,13 @@ const Container = styled.div`
     flex-wrap: wrap;
     justify-content: center;
     margin: 4px 0 50px 0;
-    @media (min-width: 680px) {
+    @media (min-width: 700px) {
         justify-content: space-between;
-        width: 680px;
+        width: 670px;
     }
-    @media (min-width: 1392px) {
+    @media (min-width: 1410px) {
         width: 1392px;
+        justify-content: space-between;
     }
 `;
 const Card = styled.div`

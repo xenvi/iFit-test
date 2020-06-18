@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import styled from "styled-components";
 
 // Image files
@@ -15,16 +15,19 @@ const Wrapper = styled.nav`
     padding: 0 40px;
     margin-top: 1px;
     color: rgba(46, 49, 52, 0.8);
-    z-index: 2;
+    z-index: 3;
     transition: 0.3s ease-in-out;
 `;
 const NavLinks = styled.ul`
+    display: none;
     list-style: none;
     height: 100%;
-    display: flex;
     font: 600 14px/14px "Proxima Nova Lt";
     letter-spacing: 1px;
     text-transform: uppercase;
+    @media (min-width: 800px) {
+        display: flex;
+    }
 `;
 const Link = styled.li`
     display: flex;
@@ -39,6 +42,7 @@ const Link = styled.li`
     }
 `;
 const Button = styled.button`
+    display: none;
     width: 90px;
     height: 36px;
     box-shadow: 0 1px 2px rgba(46, 49, 52, 0.4);
@@ -58,15 +62,107 @@ const Button = styled.button`
         background: #00478f;
         transition: 0.3s ease-in-out;
     }
+    @media (min-width: 800px) {
+        display: block;
+    }
 `;
 const Brand = styled.img`
     cursor: pointer;
 `;
+const Hamburger = styled.div`
+    position: relative;
+    width: 28px;
+    height: 28px;
+    margin-top: 4px;
+    cursor: pointer;
+    & span {
+        display: inline-block;
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        border-radius: 15%;
+        background: #898989;
+        transition: 0.1s all ease-in-out;
+    }
+    & span:nth-child(1) {
+        top: 0;
+    }
+    & span:nth-child(2), span:nth-child(3) {
+        top: 10px;
+    }
+    & span:nth-child(4) {
+        top: 20px;
+    }
+    &.open {
+        & span:nth-child(1) {
+            top: 10px;
+            opacity: 0;
+        }
+        & span:nth-child(2) {
+            -webkit-transform: rotate(-45deg);
+            -moz-transform: rotate(-45deg);
+            -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+            background: #898989;
+        }
+        & span:nth-child(3) {
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+            background: #898989;
+        }
+        & span:nth-child(4) {
+            top: 10px;
+            opacity: 0;
+        }
+    }
+    @media (min-width: 800px) {
+        display: none;
+    }
+`;
+const MobileNav = styled.nav`
+    z-index: 2;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font: 600 14px/14px "Proxima Nova Lt";
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    top: 118px;
+    background: #fff;
+    width: 100%;
+    height: auto;
+    margin-top: 1px;
+    box-shadow: 0 1px 2px rgba(46, 49, 52, 0.4);
+    margin-left: 100%;
+    transition: 0.3s ease-in-out;
+    @media (min-width: 800px) {
+        display: none;
+    }
+`;
+const MobileLink = styled(Link)`
+    padding: 15px 0;
+    width: 100%;
+    box-shadow: 0 1px 2px rgba(46, 49, 52, 0.1);
+`;
+const MobileButton = styled(Button)`
+    display: block;
+    margin: 15px 0;
+`;
 
 function MainNav() {
     return (
-    <Wrapper id="nav">
+    <Fragment>
+        <Wrapper id="nav" className="stickynav">
         <Brand src={BrandSvg} alt="Brand" />
+        <Hamburger id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </Hamburger>
             <NavLinks>
                 <Link>Exercise</Link>
                 <Link>Nutrition</Link>
@@ -76,7 +172,17 @@ function MainNav() {
             <Button>
                 <p>Sign Up</p>
             </Button>
-    </Wrapper>
+        </Wrapper>
+        <MobileNav id="mobilenav">
+            <MobileLink>Exercise</MobileLink>
+            <MobileLink>Nutrition</MobileLink>
+            <MobileLink>Activity</MobileLink>
+            <MobileLink>Sleep</MobileLink>
+            <MobileButton>
+                <p>Sign Up</p>
+            </MobileButton>
+        </MobileNav>
+    </Fragment>
     );
   }
 
