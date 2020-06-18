@@ -25,10 +25,6 @@ window.onload = function() {
         card.style.transform = 'perspective(500px) scale(1) rotateX(0) rotateY(0)'
         });
 
-        card.addEventListener('mousedown', function() {
-        card.style.transform = 'perspective(500px) scale(0.95) rotateX(0) rotateY(0)'
-        });
-
         card.addEventListener('mouseup', function() {
         card.style.transform = 'perspective(500px) scale(1.1) rotateX(0) rotateY(0)'
         });

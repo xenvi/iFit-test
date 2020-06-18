@@ -49,6 +49,7 @@ const Card = styled.div`
     background-color: #fff;
     transition: 0.3s ease-in-out;
     &:hover {
+        transform: scale(1.05);
         box-shadow: 0 7px 12px rgba(46, 49, 52, 0.3);
         cursor: pointer;
         transition: 0.3s ease-in-out;
