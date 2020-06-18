@@ -26,10 +26,14 @@ const LinksContainer = styled.div`
     align-items: center;
 `;
 const LinksWrapper = styled.div`
-    width: 700px;
+    width: 100vw;
+    padding: 30px;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    @media (min-width: 700px) {
+        width: 700px;
+    }
 `;
 const Column = styled.ul`
     list-style: none;
@@ -84,14 +88,24 @@ const Circle = styled.img`
 const LegalContainer = styled.div`
     position: relative;
     width: 100%;
-    height: 64px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 128px;
     color: #fff;
     font: 600 14px/16px "Proxima Nova Lt";
     letter-spacing: 0.3px;
-    padding: 24px 40px;
+    padding: 24px 20px;
+    @media (min-width: 700px) {
+        align-items: center;
+        height: 64px;
+        padding: 24px 40px;
+    }
+`;
+const Main = styled.div`
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    @media (min-width: 700px) {
+        justify-content: center;
+    }
 `;
 const Copyright = styled.div`
     color: #fff;
@@ -100,24 +114,30 @@ const Copyright = styled.div`
 `;
 const LegalItem = styled.p`
     opacity: 0.8;
-    margin-left: 25px;
+    margin-left: 10px;
     transition: 0.3s ease-in-out;
     &:hover {
         opacity: 1;
         cursor: pointer;
         transition: 0.3s ease-in-out;
     }
+    @media (min-width: 700px) {
+        margin-left: 25px;
+    }
 `;
 const Language = styled.div`
-    position: absolute;
-    left: 0;
     display: flex;
     align-items: center;
     color: #fff;
     font: 700 14px/16px "Proxima Nova Rg";
     letter-spacing: 0.5px;
-    margin-left: 40px;
     cursor: pointer;
+    margin-top: 20px;
+    @media (min-width: 700px) {
+        position: absolute;
+        left: 0;
+        margin: 0 0 0 40px;
+    }
 `;
 const Arrow = styled.div`
     display: flex;
@@ -173,13 +193,15 @@ function Footer() {
             </IconWrapper>
         </SocialContainer>
         <LegalContainer>
+            <Main>
+                <Copyright><p>© iFit.com. All Rights Reserved.</p></Copyright>
+                <LegalItem>Privacy Policy</LegalItem>
+                <LegalItem>Terms of Use</LegalItem>
+            </Main>
             <Language>
                 <p>English</p>
                 <Arrow><img src={ArrowDown} alt="ArrowDown" /></Arrow>
             </Language>
-            <Copyright><p>© iFit.com. All Rights Reserved.</p></Copyright>
-            <LegalItem>Privacy Policy</LegalItem>
-            <LegalItem>Terms of Use</LegalItem>
         </LegalContainer>
     </Wrapper>
     );

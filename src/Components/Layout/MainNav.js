@@ -4,7 +4,7 @@ import styled from "styled-components";
 // Image files
 import BrandSvg from "../../Images/Brand.svg";
 
-const Wrapper = styled.div`
+const Wrapper = styled.nav`
     width: 100%;
     height: 72px;
     box-shadow: 0 1px 2px rgba(46, 49, 52, 0.4);
@@ -15,6 +15,8 @@ const Wrapper = styled.div`
     padding: 0 40px;
     margin-top: 1px;
     color: rgba(46, 49, 52, 0.8);
+    z-index: 2;
+    transition: 0.3s ease-in-out;
 `;
 const NavLinks = styled.ul`
     list-style: none;
@@ -63,17 +65,17 @@ const Brand = styled.img`
 
 function MainNav() {
     return (
-    <Wrapper>
-        <Brand src={BrandSvg} alt="Brand" />    
-        <NavLinks>
-            <Link>Exercise</Link>
-            <Link>Nutrition</Link>
-            <Link>Activity</Link>
-            <Link>Sleep</Link>
-        </NavLinks>        
-        <Button>
-            <p>Sign Up</p>
-        </Button>
+    <Wrapper id="nav">
+        <Brand src={BrandSvg} alt="Brand" />
+            <NavLinks>
+                <Link>Exercise</Link>
+                <Link>Nutrition</Link>
+                <Link>Activity</Link>
+                <Link>Sleep</Link>
+            </NavLinks>        
+            <Button>
+                <p>Sign Up</p>
+            </Button>
     </Wrapper>
     );
   }

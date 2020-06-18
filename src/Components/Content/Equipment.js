@@ -9,7 +9,7 @@ import StrengthSvg from '../../Images/Strength.svg';
 
 const Wrapper = styled.section`
     width: 100%;
-    height: 382px;
+    min-height: 382px;
     background: #fff;
     display: flex;
     flex-direction: column;
@@ -17,18 +17,27 @@ const Wrapper = styled.section`
     justify-content: center;
     font: 600 24px/28px "Proxima Nova Lt";
     margin: 75px 0 50px 0;
+    padding: 0 20px;
 `;
 const Text = styled.p`
     opacity: 0.8;
     color: #34383c;
     letter-spacing: 0.3px;
+    text-align: center;
 `;
 const Container = styled.div`
-    width: 1392px;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 24px 0 50px 0;
+    justify-content: center;
+    margin: 4px 0 50px 0;
+    @media (min-width: 680px) {
+        justify-content: space-between;
+        width: 680px;
+    }
+    @media (min-width: 1392px) {
+        width: 1392px;
+    }
 `;
 const Card = styled.div`
     width: 330px;
@@ -41,6 +50,7 @@ const Card = styled.div`
     border-radius: 4px;
     background-color: #fff;
     font: 700 24px/28px "Proxima Nova Rg";
+    margin-top: 20px;
     transition: 0.1s ease-in-out;
     &:hover {
         box-shadow: 0 7px 12px rgba(46, 49, 52, 0.3);

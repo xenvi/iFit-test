@@ -13,6 +13,7 @@ const Wrapper = styled.section`
     align-items: center;
     justify-content: center;
     background-color: #000;
+    padding: 20px;
 `;
 const LandingImage = styled.div`
     position: absolute;
@@ -24,16 +25,24 @@ const LandingImage = styled.div`
     opacity: 0.79;
 `;
 const LandingText = styled.div`
-    width: 984px;
+    width: 100%;
+    height: auto;
     color: #fff;
-    font: 600 72px/90px "Proxima Nova Lt";
-    font-weight: 600;
+    font: 600 48px/60px "Proxima Nova Lt";
     letter-spacing: 1px;
     z-index: 1;
+    @media (min-width: 850px) {
+        width: 790px;
+        font: 600 60px/70px "Proxima Nova Lt";
+    }
+    @media (min-width: 1000px) {
+        width: 984px;
+        font: 600 72px/90px "Proxima Nova Lt";
+    }
 `;
 const Button = styled.button`
     margin-top: 56px;
-    width: 392px;
+    width: 100%;
     height: 56px;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.24), 0 0 1px rgba(0, 0, 0, 0.12);
     border-radius: 4px;
@@ -53,13 +62,16 @@ const Button = styled.button`
         background: #00478f;
         transition: 0.3s ease-in-out;
     }
+        @media (min-width: 392px) {
+            width: 392px;
+        }
 `;
 
 function Hero() {
     return (
     <Wrapper>
         <LandingImage />
-        <LandingText><p>The best personal training, right in your own home</p></LandingText>
+        <LandingText><span>The best personal training, right in your own home</span></LandingText>
         <Button><p>JOIN IFIT COACH</p></Button>
     </Wrapper>
     );

@@ -30,3 +30,18 @@ window.onload = function() {
         });
     })
 }
+
+window.onscroll = function () {
+    var nav = document.querySelector("#nav");
+    if (window.pageYOffset > 46) {
+        nav.classList.add("stickynav");
+      } else {
+        nav.classList.remove("stickynav");
+      }
+      if (window.pageYOffset > 919) {
+        nav.classList.add("hidenav");
+      } else {
+        nav.classList.remove("hidenav");
+      }
+  };
+  

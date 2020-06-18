@@ -26,23 +26,37 @@ import ViewMoreImg from '../../Images/ViewMore.png';
 
 const Wrapper = styled.section`
     width: 100%;
-    height: 584px;
+    min-height: 584px;
     background: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 50px 0;
+    padding: 0 20px;
 `;
 const Container = styled.div`
-    width: 1224px;
+    width: 100%;
     height: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    align-content: space-between;
+    justify-content: center;
+    margin-top: -20px;
+    @media (min-width: 650px) {
+        width: 595px;
+        justify-content: space-between;
+    }
+    @media (min-width: 920px) {
+        width: 920px;
+    }
+    @media (min-width: 1224px) {
+        width: 1224px;
+    }
 `;
 const Card = styled.div`
-    width: 288px;
+    min-width: 288px;
+    max-width: 400px;
+    margin-top: 20px;
+    width: 100%;
     height: 280px;
     box-shadow: 0 1px 2px rgba(46, 49, 52, 0.4);
     border-radius: 4px;
@@ -54,6 +68,10 @@ const Card = styled.div`
         cursor: pointer;
         transition: 0.3s ease-in-out;
     }
+    
+    @media (min-width: 650px) {
+        width: 288px;
+      }
 `;
 const CardImgWrapper = styled.div`
     position: relative;

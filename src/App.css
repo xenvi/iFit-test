@@ -10,3 +10,12 @@ body {
 svg {
   transition: 0.3s ease-in-out;
 }
+
+.stickynav {
+  position: sticky;
+  top: 0;
+}
+.hidenav {
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
