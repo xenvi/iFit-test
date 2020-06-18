@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import styled from "styled-components";
 
 // Image files
@@ -66,9 +66,9 @@ const CardText = styled.p`
 `;
 
 function Equipment() {
-    const [isVisible, setVisible] = React.useState(true);
-    const domRef = React.useRef();
-    React.useEffect(() => {
+    const [isVisible, setVisible] = useState({});
+    const domRef = useRef();
+    useEffect(() => {
       const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => setVisible(entry.isIntersecting));
       });

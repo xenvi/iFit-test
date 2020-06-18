@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import styled from "styled-components";
 
 // Card Image files
@@ -158,9 +158,9 @@ const ViewDetails = styled.div`
 
 
 function DesktopLibrary() {
-    const [isVisible, setVisible] = React.useState(true);
-    const domRef = React.useRef();
-    React.useEffect(() => {
+    const [isVisible, setVisible] = useState({});
+    const domRef = useRef();
+    useEffect(() => {
       const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => setVisible(entry.isIntersecting));
       });

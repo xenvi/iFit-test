@@ -3,7 +3,6 @@ import styled from "styled-components";
 
 // Logo imports
 import GearJunkie from "../../Images/svg-logos/gear-junkie-logo.svg";
-import iFitCoach from "../../Images/svg-logos/ifit-coach-logo.svg";
 import Mashable from "../../Images/svg-logos/mashable-logo.svg";
 import Wired from "../../Images/svg-logos/wired-logo.svg";
 // Icon imports
@@ -11,7 +10,7 @@ import LArrow from "../../Images/LArrow.png"
 import RArrow from "../../Images/RArrow.png"
 
 const Wrapper = styled.section`
-  width: 100%;
+  min-width: 100%;
   height: 232px;
   border-radius: 2px;
   background-color: #f4f5f7;
