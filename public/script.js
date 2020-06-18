@@ -60,7 +60,5 @@ window.onscroll = function () {
         nav.classList.remove("hidenav");
         mobilenav.classList.remove("hidenav");
       }
-
-      // Fade in on scroll
   };
   
