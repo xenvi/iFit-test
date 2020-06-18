@@ -72,8 +72,9 @@ function Equipment() {
       const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => setVisible(entry.isIntersecting));
       });
-      observer.observe(domRef.current);
-      return () => observer.unobserve(domRef.current);
+      const current = domRef.current;
+      observer.observe(current);
+      return () => observer.unobserve(current);
     }, []);
     return (
     <Wrapper className={`fade-in ${isVisible ? 'is-visible' : ''}`}
