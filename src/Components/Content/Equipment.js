@@ -64,27 +64,36 @@ const CardText = styled.p`
     color: #2e3134;
     letter-spacing: 0.3px;
 `;
-const CardImg = styled.img``;
 
 function Equipment() {
+    const [isVisible, setVisible] = React.useState(true);
+    const domRef = React.useRef();
+    React.useEffect(() => {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => setVisible(entry.isIntersecting));
+      });
+      observer.observe(domRef.current);
+      return () => observer.unobserve(domRef.current);
+    }, []);
     return (
-    <Wrapper>
+    <Wrapper className={`fade-in ${isVisible ? 'is-visible' : ''}`}
+    ref={domRef}>
         <Text>Interested in our exciting iFit-enabled equipment?</Text>
         <Container>
             <Card className="exercise-card">
-                <CardImg src={TreadmillSvg} alt="Treadmill"></CardImg>
+                <img src={TreadmillSvg} alt="Treadmill"></img>
                 <CardText>Treadmills</CardText>
             </Card>
             <Card className="exercise-card">
-                <CardImg src={BikeSvg} alt="Bikes"></CardImg>
+                <img src={BikeSvg} alt="Bikes"></img>
                 <CardText>Bikes</CardText>
             </Card>
             <Card className="exercise-card">
-                <CardImg src={EllipticalSvg} alt="Ellipticals"></CardImg>
+                <img src={EllipticalSvg} alt="Ellipticals"></img>
                 <CardText>Ellipticals</CardText>
             </Card>
             <Card className="exercise-card">
-                <CardImg src={StrengthSvg} alt="Strength"></CardImg>
+                <img src={StrengthSvg} alt="Strength"></img>
                 <CardText>Strength</CardText>
             </Card>
         </Container>
