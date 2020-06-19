@@ -99,6 +99,7 @@ const Slides = styled.div`
     display: flex;
     position: relative;
     left: 0;
+    margin-left: 464px;
     transition: 0.3s ease-in-out;
 `;
 
@@ -107,6 +108,10 @@ function Slider() {
     <Container>
       <Wrapper id="slider">
       <Slides id="slides">
+      <Card className="slide">
+            <Logo src={Mashable} alt="Mashable review"></Logo>
+            <Review><span>“Breathes new life into a tired, old running routine.”</span></Review>
+        </Card>
         <Card className="slide">
             <Logo src={GearJunkie} alt="GearJunkie review"></Logo>
             <Review><span>“You focus on putting in the work, and the technology handles the rest.”</span></Review>
@@ -118,6 +123,14 @@ function Slider() {
         <Card className="slide">
             <Logo src={Mashable} alt="Mashable review"></Logo>
             <Review><span>“Breathes new life into a tired, old running routine.”</span></Review>
+        </Card>
+        <Card className="slide">
+            <Logo src={GearJunkie} alt="GearJunkie review"></Logo>
+            <Review><span>“You focus on putting in the work, and the technology handles the rest.”</span></Review>
+        </Card>
+        <Card className="slide">
+            <Logo src={Wired} alt="Wired review"></Logo>
+            <Review><span>“Literally transports you from home to wherever you choose to run.”</span></Review>
         </Card>
       </Slides>
       <LeftButton id="prev" className="control"><img src={LArrow} alt="Left slider button" /></LeftButton>

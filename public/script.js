@@ -42,13 +42,18 @@ window.onload = function() {
         card.style.transform = 'perspective(500px) scale(1.1) rotateX(0) rotateY(0)'
         });
     });
+    
 carouselize(document.querySelector('#slider'));
     function carouselize(carousel) {
-      var wrapper = document.getElementById("slides"),
-        slideWidth = document.getElementsByClassName('slide')[0].offsetWidth + 24,
-        currentSlide = 1,
+      var wrapper = document.getElementById("slides")
+        slides = document.getElementsByClassName('slide'),
+        slideWidth = slides[0].offsetWidth + 24,
+        slideLen = slides.length,
+        currentSlide = 3,
         carouselNext = carousel.querySelector("#next"),
-        carouselPrev = carousel.querySelector("#prev");
+        carouselPrev = carousel.querySelector("#prev"),
+        last = slides[slides.length - 1],
+        first = slides[0];
 
   
       function transition(currentSlideInput, slideWidthInput) {
@@ -58,22 +63,18 @@ carouselize(document.querySelector('#slider'));
       }
   
       carouselNext.addEventListener('click', function () {
-        if (currentSlide === 2) {
-          currentSlide = 0;
-          transition(currentSlide, slideWidth);
-        } else {
-          currentSlide++;
-          transition(currentSlide, slideWidth);
-        }
+        var slides = document.getElementsByClassName('slide'),
+        last = slides[slides.length - 1],
+        first = slides[0];
+
+        last.after(first);
       });
       carouselPrev.addEventListener('click', function () {
-        if (currentSlide === 0) {
-          currentSlide = 2;
-          transition(currentSlide, slideWidth);
-        } else {
-          currentSlide--;
-          transition(currentSlide, slideWidth);
-        }
+        var slides = document.getElementsByClassName('slide'),
+        last = slides[slides.length - 1],
+        first = slides[0];
+        
+        first.after(last);
       });
   }
 }
