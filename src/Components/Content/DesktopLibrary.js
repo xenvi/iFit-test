@@ -68,7 +68,6 @@ const Card = styled.div`
         cursor: pointer;
         transition: 0.3s ease-in-out;
     }
-    
     @media (min-width: 650px) {
         width: 288px;
       }
@@ -169,144 +168,144 @@ function DesktopLibrary() {
       return () => observer.unobserve(current);
     }, []);
     return (
-    <Wrapper>
-        <Container className={`fade-in ${isVisible ? 'is-visible' : ''}`}
-    ref={domRef}>
-            <Card>
-                <CardImgWrapper>
-                    <CardImg src={Desktop1} alt="Card 1" />
-                </CardImgWrapper>
-                <CardInfoWrapper>
-                    <Details>
-                        <Title>Lake Inniscarra, Ireland—Pyramid</Title>
-                        <Avatar src={Avatar1} alt="Avatar 1" />
-                    </Details>
-                    <SmallDetails>
-                        <SmallImg src={StopwatchImg} alt="Stopwatch" />
-                        <SmallText>30:53</SmallText>
-                        <SmallImg src={DistanceImg} alt="Distance" />
-                        <SmallText>6,248 M</SmallText>
-                    </SmallDetails>
-                    <ViewDetails><p>View Details</p></ViewDetails>
-                </CardInfoWrapper>
-            </Card>
-            <Card>
-                <CardImgWrapper>
-                    <Overlay>
-                        <Number><span>9</span></Number>
-                        <Workout><p>Workouts</p></Workout>
-                        <img src={ViewMoreImg} alt="View more" />
-                    </Overlay>
-                    <CardImg src={Desktop2} alt="Card 2" />
-                </CardImgWrapper>
-                <CardInfoWrapper>
-                    <Details>
-                        <Title>Performance Series</Title>
-                        <Avatar src={Avatar2} alt="Avatar 2" />
-                    </Details>
-                </CardInfoWrapper>
-            </Card>
-            <Card>
-                <CardImgWrapper>
-                    <CardImg src={Desktop3} alt="Card 3" />
-                </CardImgWrapper>
-                <CardInfoWrapper>
-                    <Details>
-                        <Title>Slow Pulls and Fast Intervals</Title>
-                        <Avatar src={Avatar3} alt="Avatar 3" />
-                    </Details>
-                    <SmallDetails>
-                        <SmallImg src={StopwatchImg} alt="Stopwatch" />
-                        <SmallText>44:13</SmallText>
-                        <SmallImg src={DistanceImg} alt="Distance" />
-                        <SmallText>9,948 M</SmallText>
-                    </SmallDetails>
-                </CardInfoWrapper>
-            </Card>
-            <Card>
-                <CardImgWrapper>
-                    <Overlay>
-                        <Number><span>12</span></Number>
-                        <Workout><p>Workouts</p></Workout>
-                        <img src={ViewMoreImg} alt="View more" />
-                    </Overlay>
-                    <CardImg src={Desktop4} alt="Card 4" />
-                </CardImgWrapper>
-                <CardInfoWrapper>
-                    <Details>
-                        <Title>20 Minutes to Toned</Title>
-                        <Avatar src={Avatar4} alt="Avatar 4" />
-                    </Details>
-                </CardInfoWrapper>
-            </Card>
-            <Card>
-                <CardImgWrapper>
-                    <CardImg src={Desktop5} alt="Card 5" />
-                </CardImgWrapper>
-                <CardInfoWrapper>
-                    <Details>
-                        <Title>Charles Race, Boston, Massachusetts</Title>
-                        <Avatar src={Avatar5} alt="Avatar 5" />
-                    </Details>
-                    <SmallDetails>
-                        <SmallImg src={StopwatchImg} alt="Stopwatch" />
-                        <SmallText>36:22</SmallText>
-                        <SmallImg src={DistanceImg} alt="Distance" />
-                        <SmallText>8,648 M</SmallText>
-                    </SmallDetails>
-                </CardInfoWrapper>
-            </Card>
-            <Card>
-                <CardImgWrapper>
-                    <Overlay>
-                        <Number><span>12</span></Number>
-                        <Workout><p>Workouts</p></Workout>
-                        <img src={ViewMoreImg} alt="View more" />
-                    </Overlay>
-                    <CardImg src={Desktop6} alt="Card 6" />
-                </CardImgWrapper>
-                <CardInfoWrapper>
-                    <Details>
-                        <Title>Full-Body HIIT Series</Title>
-                        <Avatar src={Avatar6} alt="Avatar 6" />
-                    </Details>
-                </CardInfoWrapper>
-            </Card>
-            <Card>
-                <CardImgWrapper>
-                    <CardImg src={Desktop7} alt="Card 7" />
-                </CardImgWrapper>
-                <CardInfoWrapper>
-                    <Details>
-                        <Title>Kafue River, Zambia—Power Stroke Pyramid</Title>
-                        <Avatar src={Avatar7} alt="Avatar 7" />
-                    </Details>
-                    <SmallDetails>
-                        <SmallImg src={StopwatchImg} alt="Stopwatch" />
-                        <SmallText>22:22</SmallText>
-                        <SmallImg src={DistanceImg} alt="Distance" />
-                        <SmallText>4,660 M</SmallText>
-                    </SmallDetails>
-                </CardInfoWrapper>
-            </Card>
-            <Card>
-                <CardImgWrapper>
-                    <Overlay>
-                        <Number><span>16</span></Number>
-                        <Workout><p>Workouts</p></Workout>
-                        <img src={ViewMoreImg} alt="View more" />
-                    </Overlay>
-                    <CardImg src={Desktop8} alt="Card 8" />
-                </CardImgWrapper>
-                <CardInfoWrapper>
-                    <Details>
-                        <Title>Shred & Burn Series</Title>
-                        <Avatar src={Avatar8} alt="Avatar 8" />
-                    </Details>
-                </CardInfoWrapper>
-            </Card>
-        </Container>
-    </Wrapper>
+        <Wrapper>
+            <Container className={`fade-in ${isVisible ? 'is-visible' : ''}`}
+        ref={domRef}>
+                <Card>
+                    <CardImgWrapper>
+                        <CardImg src={Desktop1} alt="Card 1" />
+                    </CardImgWrapper>
+                    <CardInfoWrapper>
+                        <Details>
+                            <Title>Lake Inniscarra, Ireland—Pyramid</Title>
+                            <Avatar src={Avatar1} alt="Avatar 1" />
+                        </Details>
+                        <SmallDetails>
+                            <SmallImg src={StopwatchImg} alt="Stopwatch" />
+                            <SmallText>30:53</SmallText>
+                            <SmallImg src={DistanceImg} alt="Distance" />
+                            <SmallText>6,248 M</SmallText>
+                        </SmallDetails>
+                        <ViewDetails><p>View Details</p></ViewDetails>
+                    </CardInfoWrapper>
+                </Card>
+                <Card>
+                    <CardImgWrapper>
+                        <Overlay>
+                            <Number><span>9</span></Number>
+                            <Workout><p>Workouts</p></Workout>
+                            <img src={ViewMoreImg} alt="View more" />
+                        </Overlay>
+                        <CardImg src={Desktop2} alt="Card 2" />
+                    </CardImgWrapper>
+                    <CardInfoWrapper>
+                        <Details>
+                            <Title>Performance Series</Title>
+                            <Avatar src={Avatar2} alt="Avatar 2" />
+                        </Details>
+                    </CardInfoWrapper>
+                </Card>
+                <Card>
+                    <CardImgWrapper>
+                        <CardImg src={Desktop3} alt="Card 3" />
+                    </CardImgWrapper>
+                    <CardInfoWrapper>
+                        <Details>
+                            <Title>Slow Pulls and Fast Intervals</Title>
+                            <Avatar src={Avatar3} alt="Avatar 3" />
+                        </Details>
+                        <SmallDetails>
+                            <SmallImg src={StopwatchImg} alt="Stopwatch" />
+                            <SmallText>44:13</SmallText>
+                            <SmallImg src={DistanceImg} alt="Distance" />
+                            <SmallText>9,948 M</SmallText>
+                        </SmallDetails>
+                    </CardInfoWrapper>
+                </Card>
+                <Card>
+                    <CardImgWrapper>
+                        <Overlay>
+                            <Number><span>12</span></Number>
+                            <Workout><p>Workouts</p></Workout>
+                            <img src={ViewMoreImg} alt="View more" />
+                        </Overlay>
+                        <CardImg src={Desktop4} alt="Card 4" />
+                    </CardImgWrapper>
+                    <CardInfoWrapper>
+                        <Details>
+                            <Title>20 Minutes to Toned</Title>
+                            <Avatar src={Avatar4} alt="Avatar 4" />
+                        </Details>
+                    </CardInfoWrapper>
+                </Card>
+                <Card>
+                    <CardImgWrapper>
+                        <CardImg src={Desktop5} alt="Card 5" />
+                    </CardImgWrapper>
+                    <CardInfoWrapper>
+                        <Details>
+                            <Title>Charles Race, Boston, Massachusetts</Title>
+                            <Avatar src={Avatar5} alt="Avatar 5" />
+                        </Details>
+                        <SmallDetails>
+                            <SmallImg src={StopwatchImg} alt="Stopwatch" />
+                            <SmallText>36:22</SmallText>
+                            <SmallImg src={DistanceImg} alt="Distance" />
+                            <SmallText>8,648 M</SmallText>
+                        </SmallDetails>
+                    </CardInfoWrapper>
+                </Card>
+                <Card>
+                    <CardImgWrapper>
+                        <Overlay>
+                            <Number><span>12</span></Number>
+                            <Workout><p>Workouts</p></Workout>
+                            <img src={ViewMoreImg} alt="View more" />
+                        </Overlay>
+                        <CardImg src={Desktop6} alt="Card 6" />
+                    </CardImgWrapper>
+                    <CardInfoWrapper>
+                        <Details>
+                            <Title>Full-Body HIIT Series</Title>
+                            <Avatar src={Avatar6} alt="Avatar 6" />
+                        </Details>
+                    </CardInfoWrapper>
+                </Card>
+                <Card>
+                    <CardImgWrapper>
+                        <CardImg src={Desktop7} alt="Card 7" />
+                    </CardImgWrapper>
+                    <CardInfoWrapper>
+                        <Details>
+                            <Title>Kafue River, Zambia—Power Stroke Pyramid</Title>
+                            <Avatar src={Avatar7} alt="Avatar 7" />
+                        </Details>
+                        <SmallDetails>
+                            <SmallImg src={StopwatchImg} alt="Stopwatch" />
+                            <SmallText>22:22</SmallText>
+                            <SmallImg src={DistanceImg} alt="Distance" />
+                            <SmallText>4,660 M</SmallText>
+                        </SmallDetails>
+                    </CardInfoWrapper>
+                </Card>
+                <Card>
+                    <CardImgWrapper>
+                        <Overlay>
+                            <Number><span>16</span></Number>
+                            <Workout><p>Workouts</p></Workout>
+                            <img src={ViewMoreImg} alt="View more" />
+                        </Overlay>
+                        <CardImg src={Desktop8} alt="Card 8" />
+                    </CardImgWrapper>
+                    <CardInfoWrapper>
+                        <Details>
+                            <Title>Shred & Burn Series</Title>
+                            <Avatar src={Avatar8} alt="Avatar 8" />
+                        </Details>
+                    </CardInfoWrapper>
+                </Card>
+            </Container>
+        </Wrapper>
     );
   }
 

@@ -45,22 +45,8 @@ window.onload = function() {
     
 carouselize(document.querySelector('#slider'));
     function carouselize(carousel) {
-      var wrapper = document.getElementById("slides")
-        slides = document.getElementsByClassName('slide'),
-        slideWidth = slides[0].offsetWidth + 24,
-        slideLen = slides.length,
-        currentSlide = 3,
-        carouselNext = carousel.querySelector("#next"),
-        carouselPrev = carousel.querySelector("#prev"),
-        last = slides[slides.length - 1],
-        first = slides[0];
-
-  
-      function transition(currentSlideInput, slideWidthInput) {
-        var pxValue = -(currentSlideInput - 1) * slideWidthInput;
-        wrapper.style.transition = "all 0.3s ease-in-out";
-        wrapper.style.left = pxValue + "px";
-      }
+      var carouselNext = carousel.querySelector("#next"),
+        carouselPrev = carousel.querySelector("#prev");
   
       carouselNext.addEventListener('click', function () {
         var slides = document.getElementsByClassName('slide'),

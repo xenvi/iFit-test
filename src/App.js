@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Fragment } from 'react';
 import './App.css';
 
 // Components
@@ -11,8 +11,7 @@ import Slider from './Components/Content/Slider';
 import DesktopLibrary from './Components/Content/DesktopLibrary';
 import Equipment from './Components/Content/Equipment';
 
-export class App extends Component {
-  render() {
+function App() {
     return (
       <Fragment>
         <ProductNav />
@@ -24,7 +23,6 @@ export class App extends Component {
         <Footer />
       </Fragment>
     );
-  }
 }
 
 export default App;

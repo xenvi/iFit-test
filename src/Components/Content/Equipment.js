@@ -77,28 +77,28 @@ function Equipment() {
       return () => observer.unobserve(current);
     }, []);
     return (
-    <Wrapper className={`fade-in ${isVisible ? 'is-visible' : ''}`}
-    ref={domRef}>
-        <Text>Interested in our exciting iFit-enabled equipment?</Text>
-        <Container>
-            <Card className="exercise-card">
-                <img src={TreadmillSvg} alt="Treadmill"></img>
-                <CardText>Treadmills</CardText>
-            </Card>
-            <Card className="exercise-card">
-                <img src={BikeSvg} alt="Bikes"></img>
-                <CardText>Bikes</CardText>
-            </Card>
-            <Card className="exercise-card">
-                <img src={EllipticalSvg} alt="Ellipticals"></img>
-                <CardText>Ellipticals</CardText>
-            </Card>
-            <Card className="exercise-card">
-                <img src={StrengthSvg} alt="Strength"></img>
-                <CardText>Strength</CardText>
-            </Card>
-        </Container>
-    </Wrapper>
+        <Wrapper className={`fade-in ${isVisible ? 'is-visible' : ''}`}
+        ref={domRef}>
+            <Text>Interested in our exciting iFit-enabled equipment?</Text>
+            <Container>
+                <Card className="exercise-card">
+                    <img src={TreadmillSvg} alt="Treadmill"></img>
+                    <CardText>Treadmills</CardText>
+                </Card>
+                <Card className="exercise-card">
+                    <img src={BikeSvg} alt="Bikes"></img>
+                    <CardText>Bikes</CardText>
+                </Card>
+                <Card className="exercise-card">
+                    <img src={EllipticalSvg} alt="Ellipticals"></img>
+                    <CardText>Ellipticals</CardText>
+                </Card>
+                <Card className="exercise-card">
+                    <img src={StrengthSvg} alt="Strength"></img>
+                    <CardText>Strength</CardText>
+                </Card>
+            </Container>
+        </Wrapper>
     );
   }
 

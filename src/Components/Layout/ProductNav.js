@@ -26,13 +26,16 @@ const Item = styled.li`
     align-items: center;
     height: 100%;
     color: rgba(46, 49, 52, 0.8);
-    padding: 0 40px;
+    padding: 0 20px;
     border-right: 1px solid #d5d6d6;
     cursor: pointer;
     transition: 0.3s ease-in-out;
     &:hover {
         color: #ccc;
         transition: 0.3s ease-in-out;
+    }
+    @media (min-width: 500px) {
+        padding: 0 40px;
     }
 `;
 
