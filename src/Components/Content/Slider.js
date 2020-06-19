@@ -9,15 +9,21 @@ import Wired from "../../Images/svg-logos/wired-logo.svg";
 import LArrow from "../../Images/LArrow.png"
 import RArrow from "../../Images/RArrow.png"
 
-const Wrapper = styled.section`
+const Container = styled.section`
   min-width: 100%;
+  background-color: #f4f5f7;
+  display: flex;
+  justify-content: center;
+`;
+const Wrapper = styled.div`
+  max-width: 1440px;
   height: 232px;
   border-radius: 2px;
-  background-color: #f4f5f7;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  position: relative;
 `;
 const Card = styled.div`
   width: 440px;
@@ -75,26 +81,35 @@ const RightButton = styled(Button)`
     position: absolute;
     right: 16px;
 `;
+const Slides = styled.div`
+    display: flex;
+    position: relative;
+    left: 0;
+    transition: 0.3s ease-in-out;
+`;
 
 function Slider() {
     return (
-    <Wrapper>
-      <LeftButton><img src={LArrow} alt="Left slider button" /></LeftButton>
-      <Card>
-          <Logo src={GearJunkie} alt="GearJunkie review"></Logo>
-          <Review><span>“You focus on putting in the work, and the technology handles the rest.”</span></Review>
-      </Card>
-      <Card>
-          <Logo src={Wired} alt="Wired review"></Logo>
-          <Review><span>“Literally transports you from home to wherever you choose to run.”</span></Review>
-      </Card>
-      <Card>
-          <Logo src={Mashable} alt="Mashable review"></Logo>
-          <Review><span>“Breathes new life into a tired, old running routine.”</span></Review>
-      </Card>
-      
-      <RightButton><img src={RArrow} alt="Right slider button" /></RightButton>
-    </Wrapper>
+    <Container>
+      <Wrapper id="slider">
+      <Slides id="slides">
+        <Card className="slide">
+            <Logo src={GearJunkie} alt="GearJunkie review"></Logo>
+            <Review><span>“You focus on putting in the work, and the technology handles the rest.”</span></Review>
+        </Card>
+        <Card className="slide active">
+            <Logo src={Wired} alt="Wired review"></Logo>
+            <Review><span>“Literally transports you from home to wherever you choose to run.”</span></Review>
+        </Card>
+        <Card className="slide">
+            <Logo src={Mashable} alt="Mashable review"></Logo>
+            <Review><span>“Breathes new life into a tired, old running routine.”</span></Review>
+        </Card>
+      </Slides>
+      <LeftButton id="prev" className="control"><img src={LArrow} alt="Left slider button" /></LeftButton>
+      <RightButton id="next" className="control"><img src={RArrow} alt="Right slider button" /></RightButton>
+      </Wrapper>
+    </Container>
     );
   }
 

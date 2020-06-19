@@ -124,17 +124,16 @@ const Hamburger = styled.div`
 const MobileNav = styled.nav`
     z-index: 2;
     position: fixed;
+    top: 118px;
     display: flex;
     flex-direction: column;
     align-items: center;
     font: 600 14px/14px "Proxima Nova Lt";
     letter-spacing: 1px;
     text-transform: uppercase;
-    top: 118px;
     background: #fff;
     width: 100%;
     height: auto;
-    margin-top: 1px;
     box-shadow: 0 1px 2px rgba(46, 49, 52, 0.4);
     margin-left: 100%;
     transition: 0.3s ease-in-out;
