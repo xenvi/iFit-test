@@ -2,8 +2,8 @@ window.onload = function() {
     // Fade in on load
     const landingtext = document.querySelector("#landingtext");
     const landingbtn = document.querySelector("#landingbtn");
-    setTimeout(function(){ landingtext.classList.add('reveal')}, 500);
-    setTimeout(function(){ landingbtn.classList.add('reveal')}, 1000);
+    setTimeout(function(){ landingtext.classList.add('revealtext')}, 600);
+    setTimeout(function(){ landingbtn.classList.add('revealbtn')}, 1800);
     
     // Hamburger nav open
     const mobilenav = document.querySelector("#mobilenav");
@@ -82,14 +82,13 @@ window.onscroll = function () {
     // Nav position and visibility on scroll
     var nav = document.querySelector("#nav");
     var mobilenav = document.querySelector("#mobilenav");
-    if (window.pageYOffset > 46) {
-      mobilenav.style.top = '72px';
-    } else {
-      mobilenav.style.top = '118px';
-    }
+    var productnav = document.querySelector("#productnav");
       if (window.pageYOffset > 919) {
         nav.classList.add("hidenav");
         mobilenav.classList.add("hidenav");
+        productnav.style.display = "none";
+      } else if (window.pageYOffset < 46) {
+        productnav.style.display = "flex";
       } else {
         nav.classList.remove("hidenav");
         mobilenav.classList.remove("hidenav");

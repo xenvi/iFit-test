@@ -62,24 +62,38 @@ const Button = styled.button`
     border: 1px solid rgba(244, 245, 247, 0.32);
     background-color: #000c28;
     border-radius: 50%;
-    opacity: 0.8;
+    opacity: 0.7;
     transition: 0.3s all ease-in-out;
     &:hover {
-      opacity: 1;
+      opacity: 0.8;
       cursor: pointer;
       transition: 0.3s all ease-in-out;
     }
     &:focus {
       outline: none;
     }
+    @media (min-width: 600px) {
+      opacity: 0.8;
+      &:hover {
+        opacity: 0.9;
+        cursor: pointer;
+        transition: 0.3s all ease-in-out;
+      }
+    }
 `;
 const LeftButton = styled(Button)`
     position: absolute;
-    left: 16px;
+    left: 4px;
+    @media (min-width: 600px) {
+      left: 16px;
+    }
 `;
 const RightButton = styled(Button)`
     position: absolute;
-    right: 16px;
+    right: 4px;
+    @media (min-width: 600px) {
+      right: 16px;
+    }
 `;
 const Slides = styled.div`
     display: flex;

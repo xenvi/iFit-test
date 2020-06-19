@@ -26,13 +26,14 @@ const LandingImage = styled.div`
 `;
 const LandingText = styled.div`
     opacity: 0;
+    margin-top: 20px;
     width: 100%;
     height: auto;
     color: #fff;
     font: 600 48px/60px "Proxima Nova Lt";
     letter-spacing: 1px;
     z-index: 1;
-    transition: 0.3s ease-in-out;
+    transition: 0.7s ease-in-out;
     @media (min-width: 850px) {
         width: 790px;
         font: 600 60px/70px "Proxima Nova Lt";
@@ -45,6 +46,7 @@ const LandingText = styled.div`
 const Button = styled.button`
     opacity: 0;
     margin-top: 56px;
+    transform: scale(1.1);
     width: 100%;
     height: 56px;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.24), 0 0 1px rgba(0, 0, 0, 0.12);
@@ -57,7 +59,7 @@ const Button = styled.button`
     border: none;
     cursor: pointer;
     z-index: 1;
-    transition: 0.3s ease-in-out;
+    transition: 0.6s ease-in-out;
     &:focus {
         outline: none;
     }

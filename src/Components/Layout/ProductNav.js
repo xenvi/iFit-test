@@ -8,6 +8,9 @@ const Wrapper = styled.nav`
     display: flex;
     align-items: center;
     box-shadow: 0 1px 2px rgba(46, 49, 52, 0.4);
+    z-index: 3;
+    position: sticky;
+    top: 0;
 `;
 const ListItems = styled.ul`
     list-style: none;
@@ -35,7 +38,7 @@ const Item = styled.li`
 
 function ProductNav() {
     return (
-    <Wrapper>
+    <Wrapper id="productnav">
         <ListItems>
             <Item>Blog</Item>
             <Item>Nourish</Item>

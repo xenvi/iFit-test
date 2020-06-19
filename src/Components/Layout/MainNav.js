@@ -124,16 +124,19 @@ const Hamburger = styled.div`
 const MobileNav = styled.nav`
     z-index: 2;
     position: fixed;
-    top: 118px;
+    top: 0;
+    right: -50%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     font: 600 14px/14px "Proxima Nova Lt";
     letter-spacing: 1px;
     text-transform: uppercase;
     background: #fff;
-    width: 100%;
-    height: auto;
+    width: 50%;
+    height: 100%;
+    padding-top: 46px;
     box-shadow: 0 1px 2px rgba(46, 49, 52, 0.4);
     margin-left: 100%;
     transition: 0.3s ease-in-out;
@@ -144,7 +147,6 @@ const MobileNav = styled.nav`
 const MobileLink = styled(Link)`
     padding: 15px 0;
     width: 100%;
-    box-shadow: 0 1px 2px rgba(46, 49, 52, 0.1);
 `;
 const MobileButton = styled(Button)`
     display: block;
