@@ -45,7 +45,7 @@ window.onload = function() {
 carouselize(document.querySelector('#slider'));
     function carouselize(carousel) {
       var wrapper = document.getElementById("slides"),
-        slideWidth = document.getElementsByClassName('slide')[0].offsetWidth,
+        slideWidth = document.getElementsByClassName('slide')[0].offsetWidth + 24,
         currentSlide = 1,
         carouselNext = carousel.querySelector("#next"),
         carouselPrev = carousel.querySelector("#prev");

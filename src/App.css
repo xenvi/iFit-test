@@ -17,8 +17,8 @@ svg {
   top: 0;
 }
 .hidenav {
-  opacity: 0;
-  transition: 0.3s ease-in-out;
+  top: -50% !important;
+  transition: 0.6s ease-in-out;
 }
 .slidein {
   margin-left: 0 !important;
